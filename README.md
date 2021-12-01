@@ -1,2 +1,3 @@
 # Angie-Huang-Carolin-Pan-Nivedita-Kamath-Period-2
-CSP Webpage
+Our wonderful code for our wonderful CSP Webpage!
+Don't forget to smile:)
