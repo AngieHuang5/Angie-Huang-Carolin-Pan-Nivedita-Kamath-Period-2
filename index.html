@@ -16,45 +16,37 @@
     
 
 <!-- MENU BAR -->
-<button class="tablink" onmouseover="openPage('Home', this, 'red')">Home</button>
-<button class="tablink" onmouseover="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onmouseover="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onmouseover="openPage('About', this, 'orange')">About</button>
 
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
+<div id="myNav" class="overlay">
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <div class="overlay-content">
+    <a href="#">Homepage</a>
+    <a href="#">Psychological Illusions</a>
+    <a href="#">Literal Illusions</a>
+    <a href="#">Cognitive Illusions</a>
+  </div>
+
 </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p>
-</div>
+<span onclick="openNav()">Table of Contents</span>
 
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
-
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
-</div>
 
 <!-- HOMEPAGE ACCORDION-->
-    <button class="accordion">Definition of optical illusion</button>
+    <button class="accordion">Definition</button>
 <div class="panel">
   <p>Optical illusion is best defined as something that tricks your eyes and makes you think that you can see something that is not there, or makes you see something as different from what it really is.</p>
 </div>
 
-<button class="accordion">Types of optical illusions</button>
+<button class="accordion">Types</button>
 <div class="panel">
   <p>Three different types of opticla illusions: psychological illusions, literal illusions, and cognitive illusions.</p>
 </div>
 
-<button class="accordion">Section 3</button>
+<button class="accordion">Significance</button>
 <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Optical illusions teach us how our eyes and brain work together to see. Many artists use optical illusions to to create phenomena that fool the eye, confusing viewers into seeing more than what is actually there. </p>
 </div>
 
 <script>
