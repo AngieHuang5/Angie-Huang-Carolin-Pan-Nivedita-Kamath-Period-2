@@ -6,31 +6,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>CSP Webpage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.accordion {
-  background-color: #eee;
-  color: #444; 
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
 
-.active, .accordion:hover {
-  background-color: #ccc; 
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-</style>
   </head>
 
   <body>
@@ -40,30 +16,31 @@
     
 
 <!-- MENU BAR -->
- <div id="London" class="tabcontent">
-  <h1>London</h1>
-  <p>London is the capital city of England.</p>
+<button class="tablink" onmouseover="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onmouseover="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onmouseover="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onmouseover="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h1>Paris</h1>
-  <p>Paris is the capital of France.</p>
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p>
 </div>
 
-<div id="Tokyo" class="tabcontent">
-  <h1>Tokyo</h1>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
 
-<div id="Oslo" class="tabcontent">
-  <h1>Oslo</h1>
-  <p>Oslo is the capital of Norway.</p>
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
 </div>
 
-<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
-<button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
-<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
-<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
 <!-- HOMEPAGE ACCORDION-->
     <button class="accordion">Definition of optical illusion</button>
 <div class="panel">
@@ -98,26 +75,5 @@ for (i = 0; i < acc.length; i++) {
     </script>
  
     
-<!-- HOVER TABS -->
-    <div class="tab">
-  <button class="tablinks" onmouseover="openCity(event, 'Psychological-Illusions')">Psychological Illusions</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Literal-Illusions')">Literal Illusions</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Cognitive-Illusions')">Cognitive Illusions</button>
-</div>
-
-<div id="Psychological-Illusions" class="tabcontent">
-  <h3>Psychological Illusions</h3>
-  <p>Psychological llusions are best <a href="https://www.tandfonline.com/doi/abs/10.1080/09515088808572940?journalCode=cphp20">defined</a> as a discrepancy between one's perceptions of an object or event observed under different conditions.</p>
-</div>
-
-<div id="Literal-Illusions" class="tabcontent">
-  <h3>Literal Illusions</h3>
-  <p>Literal illusions are best <a href= "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3135449/">defined</a> as a common thinking error or thinking trap.</p>
-</div>
-
-<div id="Cognitive-Illusions" class="tabcontent">
-  <h3>Cognitive Illusions</h3>
-  <p>Cognitive illusions are  EDIT.</p>
-</div>
   </body>
 </html>
