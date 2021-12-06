@@ -1,1 +1,127 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CSP Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="app.js"></script>
+
+    <h1>Cognitive Illusions</h1>
+    <img src="https://developingcreativepractice.files.wordpress.com/2013/10/untitled-2.jpg">
+
+    <!-- ACCORDION-->
+    <button class="accordion">Afterimage</button>
+    <div class="panel">
+        <p>Instances where your brain fills in the gaps of a sight that it thinks should be there.</p>
+    </div>
+
+    <button class="accordion">Examples</button>
+    <div class="panel">
+        <p>Three different types of opticla illusions: psychological illusions, literal illusions, and cognitive
+            illusions.</p>
+    </div>
+
+    <button class="accordion">Hermann Grid</button>
+    <div class="panel">
+        <p>Here you will see a white grid with black squares, but as you move your eyes across the patter, you will see
+            grey spots in places where black lines cross over each other</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+
+
+    <!-- HOVER TABS -->
+    <div class="tab">
+        <button class="tablinks" onmouseover="openCity(event, 'The Dynamic Ebbinghaus')">The Dynamic Ebbinghaus</button>
+        <button class="tablinks" onmouseover="openCity(event, 'The Skye Blue Cafe Wall Illusion')">The Skye Blue Cafe
+            Wall Illusion</button>
+        <button class="tablinks" onmouseover="openCity(event, 'Confetti')">Confetti</button>
+        <button class="tablinks" onmouseover="openCity(event, 'The Rice Wave Illusion')">The Rice Wave Illusion</button>
+        <button class="tablinks" onmouseover="openCity(event, 'The Tilted Road Illuion')">The Tilted Road
+            Illuion</button>
+        <button class="tablinks" onmouseover="openCity(event, 'The Train Illusion')">The Train Illusion</button>
+    </div>
+
+    <div id="The Dynamic Ebbinghaus" class="tabcontent">
+        <h3>The Dynamic Ebbinghaus</h3>
+        <p>The orange circle does not change size.</p>
+        <img src="https://www.centreforsight.com/wp-content/uploads/2018/03/centre_for_sight_-_literal_optical_illusions_with_elephant_legs.jpg">
+    </div>
+
+    <div id="The Skye Blue Cafe Wall Illusion" class="tabcontent">
+        <h3>The Skye Blue Cafe Wall Illusion</h3>
+        <p> The horizontal lines are perfectly parallel.</p>
+        <img src="http://static.nautil.us/15395_0e2e84a82d94dc94d5749d44d4c6c73b.png">
+    </div>
+
+    <div id="Confetti" class="tabcontent">
+        <h3>Confetti</h3>
+        <p>The circles are actually the same color, but the lines make them look different.</p>
+        <img src="http://static.nautil.us/15396_5b46370c9fd40a27ce2b2abc281064de.png">
+    </div>
+    <div id="The Rice Wave Illusion" class="tabcontent">
+        <h3>The Rice Wave Illusion</h3>
+        <p>The image looks like it is animated.</p>
+        <img src="http://static.nautil.us/15397_8e452e79cd525671ce2fb6997b73aaf9.png">
+    </div>
+    <div id="The Tilted Road Illuion" class="tabcontent">
+        <h3>The Tilted Road Illuion</h3>
+        <p>same picture, but looks like it is taken from two different angles.</p>
+        <img src="http://static.nautil.us/15398_5edba33a1dcf1876318fb7013a0a8134.png">
+    </div>
+    <div id="The Train Illusion" class="tabcontent">
+        <h3>The Train Illusion</h3>
+        <p>Train is moving in two directions.</p>
+        <img src="http://nautilus-prod.s3.amazonaws.com/Stewart9.gif">
+    </div>
+</body>
+
+</html>
