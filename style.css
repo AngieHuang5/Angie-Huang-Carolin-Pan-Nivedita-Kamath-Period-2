@@ -1,15 +1,3 @@
-/* Titles */
-.title {
-  text-align: center;
-  text-shadow: bisque;
-  font-family: fantasy;
-}
-/* text */
-.information {
-  text-align: left;
-  font-family: monospace;
-  font-size: medium;
-  
 /* NAVBAR */
 /* Add a black background color to the top navigation */
 .topnav {
@@ -66,7 +54,6 @@
   display: none;
   overflow: hidden;
 }
-
 
 /* Centered text */
 .centered {
