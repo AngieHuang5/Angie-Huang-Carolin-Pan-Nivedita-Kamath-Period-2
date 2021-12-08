@@ -55,6 +55,8 @@
   overflow: hidden;
 }
 
+
+/* EVERYTHING AFTER THIS POINT MAKES THE INDEX HTML NOT WORK!! */
 /* Centered text */
 .centered {
   position: absolute;
