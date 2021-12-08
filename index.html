@@ -5,60 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>CSP Webpage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
     <script src="app.js"></script>
-    
-<h1>Optical Illusions</h1>
-    
 
-<!-- NAVBAR -->
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
+    <h1>Optical Illusions</h1>
 
+    <!-- NAVBAR -->
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="page1.html">Psychological</a>
+      <a href="page2.html">Literal</a>
+      <a href="page3.html">Cognitive</a>
+    </div>
 
+    <!-- MENU BAR -->
 
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
 
-<!-- HOMEPAGE ACCORDION-->
+      <div class="overlay-content">
+        <a href="#">Homepage</a>
+        <a href="#">Psychological Illusions</a>
+        <a href="#">Literal Illusions</a>
+        <a href="#">Cognitive Illusions</a>
+      </div>
+    </div>
+
+    <span onclick="openNav()">Table of Contents</span>
+
+    <!-- HOMEPAGE ACCORDION-->
     <button class="accordion">Definition</button>
-<div class="panel">
-  <p>Optical illusion is best defined as something that tricks your eyes and makes you think that you can see something that is not there, or makes you see something as different from what it really is.</p>
-</div>
+    <div class="panel">
+      <p>
+        Optical illusion is best defined as something that tricks your eyes and
+        makes you think that you can see something that is not there, or makes
+        you see something as different from what it really is.
+      </p>
+    </div>
 
-<button class="accordion">Types</button>
-<div class="panel">
-  <p>Three different types of opticla illusions: psychological illusions, literal illusions, and cognitive illusions.</p>
-</div>
+    <button class="accordion">Types</button>
+    <div class="panel">
+      <p>
+        Three different types of opticla illusions: psychological illusions,
+        literal illusions, and cognitive illusions.
+      </p>
+    </div>
 
-<button class="accordion">Significance</button>
-<div class="panel">
-  <p>Optical illusions teach us how our eyes and brain work together to see. Many artists use optical illusions to to create phenomena that fool the eye, confusing viewers into seeing more than what is actually there. </p>
-</div>
+    <button class="accordion">Significance</button>
+    <div class="panel">
+      <p>
+        Optical illusions teach us how our eyes and brain work together to see.
+        Many artists use optical illusions to to create phenomena that fool the
+        eye, confusing viewers into seeing more than what is actually there.
+      </p>
+    </div>
 
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
     </script>
- 
-    
   </body>
 </html>
