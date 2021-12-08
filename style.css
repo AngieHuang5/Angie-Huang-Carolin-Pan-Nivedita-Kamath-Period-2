@@ -54,3 +54,34 @@
   display: none;
   overflow: hidden;
 }
+
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(199, 25, 25)
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.589);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
