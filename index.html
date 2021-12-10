@@ -6,61 +6,14 @@
     <link rel="stylesheet" href="./style.css" />
     <title>CSP Webpage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      body {
-        background-image: url("https://cdn.mwallpapers.com/photos/celebrities/aesthetic/aesthetic-gray-android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4khd-wallpapers-desktop-background-android-iphone-1080p-4k-bweoe.jpg");
-      }
-    </style>
-  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <style>
-      .container {
-        position: relative;
-        width: 50%;
-      }
-      
-      .image {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-      
-      .overlay {
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-        background-color: rgba(124, 81, 133, 0.438);
-        overflow: hidden;
-        width: 100%;
-        height:0;
-        transition: .5s ease;
-      }
-      
-      .container:hover .overlay {
-        bottom: 0;
-        height: 100%;
-      }
-      
-      .text {
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-      </style>
   </head>
 
   <body>
     <script src="app.js"></script>
 
-    <h1>Optical Illusions</h1>
-
+    <h1>
+        Optical Illusions
+    </h1>
 
     <!-- NAVBAR -->
     <div class="topnav">
@@ -70,41 +23,36 @@
       <a href="page3.html">Cognitive</a>
     </div>
     
-    <p class="information">What do you know about optical illusions?
-      <br>
-      Optical illusions are everywhere even if you are unaware. 
-    </p>
+    <p class="information">Let's learn about optical illusions!</p>
 
-    <p>Hover over the image to read the definition of optical illusions.</p>
-    
-    <div class="container">
-      <img src="https://i1.sndcdn.com/artworks-ZXoozayoyElTem0u-7F2KJA-t500x500.jpg" alt="Avatar" class="image">
-      <div class="overlay">
-        <div class="text">Optical illusion is best defined as something that tricks your eyes and
-          makes you think that you can see something that is not there, or makes
-          you see something as different from what it really is.</div>
-      </div>
+
+    <!-- HOMEPAGE ACCORDION-->
+    <button class="accordion">Definition</button>
+    <div class="panel">
+      <p>
+        Optical illusion is best defined as something that tricks your eyes and
+        makes you think that you can see something that is not there, or makes
+        you see something as different from what it really is.
+      </p>
     </div>
-    <div class="container">
-      <img src="https://i1.sndcdn.com/artworks-ZXoozayoyElTem0u-7F2KJA-t500x500.jpg" alt="Avatar" class="image">
-      <div class="overlay">
-        <div class="text">There are three different types of optical illusions: psychological illusions,
-          literal illusions, and cognitive illusions.</div>
-      </div>
+
+    <button class="accordion">Types</button>
+    <div class="panel">
+      <p>
+        Three different types of opticla illusions: psychological illusions,
+        literal illusions, and cognitive illusions.
+      </p>
     </div>
-    <div class="container">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" alt="Avatar" class="image">
-      <div class="overlay">
-        <div class="text">Optical illusions teach us how our eyes and brain work together to see.
-          Many artists use optical illusions to to create phenomena that fool the
-          eye, confusing viewers into seeing more than what is actually there. Optical 
-          illusions are even used in movies such as Hagrid in the <i>Harry Potter</i> 
-          movies and the dwarves in he <i>Lord of the Rings</i> movies. Leonardo Da 
-          Vinci is said to have utilized optical illusions in the <i>Mona Lisa</i> painting.</div>
-      </div>
+
+    <button class="accordion">Significance</button>
+    <div class="panel">
+      <p>
+        Optical illusions teach us how our eyes and brain work together to see.
+        Many artists use optical illusions to to create phenomena that fool the
+        eye, confusing viewers into seeing more than what is actually there.
+      </p>
     </div>
-    
-   
+
     <script>
       var acc = document.getElementsByClassName("accordion");
       var i;
