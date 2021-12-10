@@ -167,3 +167,66 @@
 </body>
 
 </html>
+
+DON"T INCLUDE THIS
+///<link rel="stylesheet" href="style.css" />
+<div style="background-color:rgba(15, 8, 4, 0.315)">
+    <h1>How many legs does this elephant have?<span id='a1'></span> </h1><br>
+    <form id="d1">
+        <input type="button" class="button" value="Four">
+        <input type="button" class="button" value="Five">
+        <input type="button" class="button" value="I cannot tell.">
+        <input type="button" class="button" value="That's not an elephant!">
+        <br>
+        <input type="submit" value="submit" onclick="validate(button.value, 'I cannot tell.', 'd1','a1')">
+    </form>
+</div>
+
+<script>
+    var validate = function (valore, rightanswer, form, span) {
+
+        var formname = document.getElementById(form)
+        var spanname = document.getElementById(span)
+
+        spanname.innerHTML = rightanswer;
+
+        if (valore == rightanswer) {
+            formname.innerHTML = "<div style='background-color:lightgreen'><h1>You're right. " + rightanswer + "</h1></div>";
+        }
+        else {
+
+            formname.innerHTML = "<div style='background-color:pink'><h1>Sorry, you where wrong: The answer was: " + rightanswer + "</h1></div>";
+        }
+    };
+</script>
+
+
+<div style="background-color:lightblue">
+    <h1>How many legs does this elephant have?<span id='a1'></span> </h1><br>
+    <form id="d1">
+        <input type="radio" name="choice" value="answer1"> 4
+        <input type="radio" name="choice" value=> 5
+        <input type="radio" name="choice" value="Application"> I can't tell.
+        <input type="radio" name="choice" value="Application"> That's not an elephant!
+        <br>
+        <input type="submit" value="submit" onclick="validate(choice.value, '4', 'd1','a1')">
+    </form>
+</div>
+
+<script>
+    var validate = function (valore, rightanswer, form, span) {
+
+        var formname = document.getElementById(form)
+        var spanname = document.getElementById(span)
+
+        spanname.innerHTML = rightanswer;
+
+        if (valore == rightanswer) {
+            formname.innerHTML = "<div style='background-color:lightgreen'><h1>You're right. " + rightanswer + "</h1></div>";
+        }
+        else {
+
+            formname.innerHTML = "<div style='background-color:pink'><h1>Sorry, you where wrong: The answer was: " + rightanswer + "</h1></div>";
+        }
+    };
+</script> ////
