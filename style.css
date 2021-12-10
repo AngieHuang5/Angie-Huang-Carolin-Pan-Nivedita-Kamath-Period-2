@@ -7,14 +7,14 @@
   text-align:center;
   font-family:fantasy;
 }
+
+
 /* NAVBAR */
-/* Add a black background color to the top navigation */
 .topnav {
   background-color: rgba(158, 110, 110, 0.267);
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   color: #332020;
@@ -25,19 +25,20 @@
   font-family: fantasy;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   background-color: rgba(182, 110, 110, 0.329);
   color: rgb(71, 45, 45);
 }
 
-/* Add a color to the active/current link */
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
 }
 
-
+/* PAGE1 BG */
+body {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAEsCAMAAABgwwj8AAAAM1BMVEW58bLO47LJ57PT4bLQ4rLD6rO68bK38bS68LO/7bPL5bLU4LLH6LPF6bPB67O777S387EipD3JAAAAsElEQVR4nO3VyQnDUAxAQe9r7Pz+q01K0MEgZGYqeAghdR0AAAAAAADAy6zbnp0Qs81HdkLM3J/ZCTHDOWYnxAxjn50QI/RpQp8m9GmfqUjoVWWi8zRlJ8TcU5EXuvdFJvo9ioSuVULbVWRH210jdGldjTu6dK1G6N+VHRB1ZwfEtG3LTohasgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4IV+W6ABr2wIEpwAAAAASUVORK5CYII=");
+      }
 
 
 
