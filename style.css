@@ -38,10 +38,11 @@
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  text-align: left;
-  border: none;
+  text-align: center;
+  border:beige;
   outline: none;
   transition: 0.4s;
+  font-family: cursive;
 }
 
 .active, .accordion:hover {
@@ -53,36 +54,4 @@
   background-color: white;
   display: none;
   overflow: hidden;
-}
-
-
-/* EVERYTHING AFTER THIS POINT MAKES THE INDEX HTML NOT WORK!! */
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(199, 25, 25)
-}
-
-.responsive {
-  width: 100%;
-  height: auto;
-}
-
-/* Container holding the image and the text */
-.container {
-  position: relative;
-}
-
-/* Bottom right text */
-.text-block {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: rgba(0, 0, 0, 0.589);
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
 }
