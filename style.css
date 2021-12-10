@@ -1,3 +1,12 @@
+/* Questions */
+.questions{
+  background-color:lightblue
+}
+/* Title */
+.title{
+  text-align:center;
+  font-family:fantasy;
+}
 /* NAVBAR */
 /* Add a black background color to the top navigation */
 .topnav {
@@ -12,7 +21,8 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  font-family: fantasy;
 }
 
 /* Change the color of links on hover */
@@ -42,7 +52,8 @@
   border:beige;
   outline: none;
   transition: 0.4s;
-  font-family: cursive;
+  font-family: fantasy;
+  font-size: medium;
 }
 
 .active, .accordion:hover {
