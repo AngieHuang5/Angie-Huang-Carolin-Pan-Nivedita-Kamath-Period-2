@@ -40,6 +40,31 @@ body {
         background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAEsCAMAAABgwwj8AAAAM1BMVEW58bLO47LJ57PT4bLQ4rLD6rO68bK38bS68LO/7bPL5bLU4LLH6LPF6bPB67O777S387EipD3JAAAAsElEQVR4nO3VyQnDUAxAQe9r7Pz+q01K0MEgZGYqeAghdR0AAAAAAADAy6zbnp0Qs81HdkLM3J/ZCTHDOWYnxAxjn50QI/RpQp8m9GmfqUjoVWWi8zRlJ8TcU5EXuvdFJvo9ioSuVULbVWRH210jdGldjTu6dK1G6N+VHRB1ZwfEtG3LTohasgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4IV+W6ABr2wIEpwAAAAASUVORK5CYII=");
       }
 
+/* HOMEPAGE ACCORDION */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border:beige;
+  outline: none;
+  transition: 0.4s;
+  font-family: fantasy;
+  font-size: medium;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
 
 
 /* Centered text */
