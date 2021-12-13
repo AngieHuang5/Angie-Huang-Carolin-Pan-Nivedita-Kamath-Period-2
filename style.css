@@ -9,13 +9,14 @@
 }
 /*words at the top*/
 .information{
-  font-size: x-large;
-  font-family:sans-serif;
+  text-align: center;
+  font-size:x-large;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 /*instructions*/
 .instructions{
   font-size: large;
-  font-family:monospace;
+  font-family:'Times New Roman', Times, serif;
 }
 /* NAVBAR */
 .topnav {
