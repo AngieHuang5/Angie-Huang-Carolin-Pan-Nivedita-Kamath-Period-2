@@ -7,8 +7,16 @@
   text-align:center;
   font-family:fantasy;
 }
-
-
+/*words at the top*/
+.information{
+  font-size: x-large;
+  font-family:sans-serif;
+}
+/*instructions*/
+.instructions{
+  font-size: large;
+  font-family:monospace;
+}
 /* NAVBAR */
 .topnav {
   background-color: rgba(158, 110, 110, 0.267);
@@ -19,7 +27,7 @@
   float: left;
   color: #332020;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 40px;
   text-decoration: none;
   font-size: 20px;
   font-family: fantasy;
@@ -101,4 +109,17 @@ body {
 .MCQ {
   background-color:rgb(18, 157, 204);
   color:  black;
+}
+
+/*hover tabs*/
+.tablinks {
+  background-color: #06470931; /* Green */
+  border:rgba(0, 0, 0, 0.589);
+  color: rgb(24, 2, 2);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family:monospace;
 }
