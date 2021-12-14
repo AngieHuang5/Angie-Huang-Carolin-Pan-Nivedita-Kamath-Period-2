@@ -6,16 +6,22 @@
     <link rel="stylesheet" href="./style.css" />
     <title>CSP Webpage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <style>
+    <style>
       body {background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTlESoSQ0Jbi9jEZT-8iEsRcfY_CrlJT32KKPM5nqRgXSlmxilSD21i1exKhb7uyElsGI&usqp=CAU");
       }
-     </style>
+      p {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(250, 244, 244);
+  font-family: fantasy;
+}
+    </style>
   </head>
 
   <body>
     <script src="app.js"></script>
 
-    <h1 class="title">
+    <h1>
     Psychological Illusions
     </h1>
     
@@ -26,6 +32,7 @@
       <a href="page2.html">Literal</a>
       <a href="page3.html">Cognitive</a>
     </div>
+    <br>
 
     <!-- ACCORDION-->
     <button class="accordion">Afterimage</button>
@@ -35,7 +42,6 @@
         should be there.
       </p>
     </div>
-
     <button class="accordion">Examples</button>
     <div class="panel">
       <p>
@@ -52,7 +58,7 @@
         lines cross over each other
       </p>
     </div>
-
+<br>
     <script>
       var acc = document.getElementsByClassName("accordion");
       var i;
@@ -69,7 +75,7 @@
         });
       }
     </script>
-
+<br>
     <!-- HOVER TABS -->
     <div class="tab">
       <button
