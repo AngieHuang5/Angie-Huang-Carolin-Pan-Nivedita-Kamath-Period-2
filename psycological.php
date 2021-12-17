@@ -52,16 +52,14 @@
     <button class="accordion">What is it?</button>
     <div class="panel">
       <p>
-        A psychological illusion tricks the mind and eyes into perceiving an image differently than displayed.
+        A psychological illusion tricks the mind and eyes into perceiving an image differently than displayed. 
       </p>
     </div>
     <button class="accordion">How does it work?</button>
     <div class="panel">
       <p>
-        When looking at a psychological illusion, you may experience a discrepancy between your perceptions of an object or event observed under different conditions.
-      </p>
+        When looking at a psychological illusion, you may experience a discrepancy between your perceptions of an object or event observed under different conditions. It is a concept of illusion is defined as a process involving an interaction of logical and empirical considerations. </p>
     </div>
-
 <br>
     <script>
       var acc = document.getElementsByClassName("accordion");
@@ -151,7 +149,7 @@ $conn2->close();
     <p id="Ebbinghaus"></p>
 <script>
 function showEbbinghaus() {
-  document.getElementById("Ebbinghaus").innerHTML = "The orange circle does not change size.";
+  document.getElementById("Ebbinghaus").innerHTML = "The Ebbinghaus illusion or Titchener circles is an psycological illusion of relative size perception. The orange circle does not change size. The two main visual contributors to this illusion are the difference in the distance between the outer ring and inner circles as well as the completeness of the ring surrounding the percieved smaller circle.";
 }
 </script>
       <img src="http://nautilus-prod.s3.amazonaws.com/Stewart7.gif" />
@@ -240,7 +238,7 @@ $conn2->close();
     <p id="Confetti"></p>
 <script>
 function showConfetti() {
-  document.getElementById("Confetti").innerHTML = "The circles are actually the same color, but the lines make them look different.";
+  document.getElementById("Confetti").innerHTML = "This illusion demonstrates the imperfect way our eyes percieve color. When you place a solid-colored shape behind bars of different colors, those bars influence how we see what's between them. Our brains want to fill in the gaps between the stripes. Depending on the surrounding shades, a circle that's really peach may look like it's "tinted" pink, green, or yellow.";
 }
 </script>
       <img
@@ -284,7 +282,7 @@ $conn2->close();
     <p id="Rice"></p>
 <script>
 function showRice() {
-  document.getElementById("Rice").innerHTML = "The image looks like it is animated.";
+  document.getElementById("Rice").innerHTML = "The rice grains appear to me moving because of the illusionary motion our eyes when going from light to dark colors.";
 }
 </script>
       <img
@@ -327,7 +325,8 @@ $conn2->close();
     <p id="Road"></p>
 <script>
 function showRoad() {
-  document.getElementById("Road").innerHTML = "The two pictures are the same picture, but it looks like it was taken from two different angles.";
+  document.getElementById("Road").innerHTML = "Now the illusion comes only when the same slanted image next to itself as we have here, your brain becomes convinced that one road is straight when next to another road so when the lines from the images intersect the common edge at an angle, your brain exaggerates the angle to causing the other image to appear more slanted. Try covering the image that looks slanted to see that the other image is also slanted. Once you remove your hand, one image will revert to looking straight.";
+Reply";
 }
 </script>
 
