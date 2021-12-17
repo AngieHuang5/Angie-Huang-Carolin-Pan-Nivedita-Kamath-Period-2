@@ -36,8 +36,7 @@
     <button class="accordion">What is it?</button>
     <div class="panel">
       <p>
-        Instances where your brain fills in the gaps of a sight that it thinks
-        should be there.
+        A literal illusion is when the image you see is different than the actual images in the picture. 
       </p>
     </div>
 
@@ -51,14 +50,6 @@
       </p>
     </div>
 
-    <button class="accordion">The Elephant Illusion explained.</button>
-    <div class="panel">
-      <p>
-        Here the artist draws the elephant's legs without feet, and feet without
-        legs. Our minds however fill in the missing parts, causing us to
-        therefore see more than 4 legs on the elephant.
-      </p>
-    </div>
 
     <script>
       var acc = document.getElementsByClassName("accordion");
@@ -91,17 +82,22 @@
       <button class="tablinks" onmouseover="openCity(event, 'All is Vanity')">
         All is Vanity
       </button>
-      <button class="tablinks" onmouseover="openCity(event, 'Bakery')">
+      <button class="tablinks" onmouseover="openCity(event, 'The Bakery')">
         Bakery
       </button>
     </div>
    
+
+
+
+
+
     <!-- Accordion -->
-    <div id="Face on Mars" class="tabcontent">
+<div id="Face on Mars" class="tabcontent">
       <h3>Face on Mars</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Face . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -129,18 +125,29 @@ if ($resultQuestion->num_rows > 0) {
 $conn->close();
 $conn2->close();
 ?> 
-      <p>There appears to be a face on the surface of Mars.</p>
+<button onclick="showFace()">Submit</button>
+    <p id="Face"></p>
+<script>
+function showFace() {
+  document.getElementById("Face").innerHTML = "There appears to be a face on the surface of Mars.";
+}
+</script>
       <img
         src="http://ideate.xsead.cmu.edu/uploads/thumbnails/4085/thumbnails/large/pio_med.thumb.jpeg?1445291490"
       />
     </div>
 
-    <div id="Smile in the Sky" class="tabcontent">
+
+
+
+
+
+<div id="Smile in the Sky" class="tabcontent">
       
       <h3>Smile in the Sky</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Smile . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -168,17 +175,28 @@ if ($resultQuestion->num_rows > 0) {
 $conn->close();
 $conn2->close();
 ?> 
-      <p>This photograph shows three birds flying with their wings in a position resembling a smile.</p>
+<button onclick="showSmile()">Submit</button>
+    <p id="Smile"></p>
+<script>
+function showSmile() {
+  document.getElementById("Smile").innerHTML = "This photograph shows three birds flying with their wings in a position resembling a smile.";
+}
+</script>
       <img
         src="http://ideate.xsead.cmu.edu/uploads/thumbnails/4088/thumbnails/large/literal_optical_illusion.thumb.jpeg?1445291794"
       />
     </div>
 
-    <div id="All is Vanity" class="tabcontent">
+
+
+
+
+
+<div id="All is Vanity" class="tabcontent">
       <h3>All is Vanity</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Vanity . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -206,18 +224,27 @@ if ($resultQuestion->num_rows > 0) {
 $conn->close();
 $conn2->close();
 ?>
-      <p>
-        This picture depicts both a woman sitting at a vanity and a skull. It refers to the vanity and pride of humans. In art, vanity has long been represented as a woman preoccupied with her beauty.
-      </p>
+<button onclick="showVanity()">Submit</button>
+    <p id="Vanity"></p>
+<script>
+function showVanity() {
+  document.getElementById("Vanity").innerHTML = "This picture depicts both a woman sitting at a vanity and a skull. It refers to the vanity and pride of humans. In art, vanity has long been represented as a woman preoccupied with her beauty.";
+}
+</script>
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Allisvanity.jpg"
       />
     </div>
-    <div id="Bakery" class="tabcontent">
-      <h3>Bakery</h3>
+
+
+
+
+
+<div id="The Bakery" class="tabcontent">
+      <h3>The Bakery</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Bakery . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -245,7 +272,13 @@ if ($resultQuestion->num_rows > 0) {
 $conn->close();
 $conn2->close();
 ?> 
-      <p>This image shows a woman with bread as well as skulls of different sizes.</p>
+<button onclick="showBakery()">Submit</button>
+    <p id="Bakery"></p>
+<script>
+function showBakery() {
+  document.getElementById("Bakery").innerHTML = "This image shows a woman with bread as well as skulls of different sizes.";
+}
+</script>
       <img
         src="http://ideate.xsead.cmu.edu/uploads/thumbnails/4091/thumbnails/large/9724930.thumb.jpeg?1445292100"
       />
