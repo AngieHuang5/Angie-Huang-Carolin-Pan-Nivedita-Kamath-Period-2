@@ -38,22 +38,22 @@
 
 
     <!-- ACCORDION-->
-    <button class="accordion">Afterimage</button>
+    <button class="accordion">What is it?</button>
     <div class="panel">
-        <p>Instances where your brain fills in the gaps of a sight that it thinks should be there.</p>
+        <p>A cognitive illusion is usually a picture that is meant to show an ambiguous image or images. These images
+            can be
+            meant to confuse the senses or to require the mind to refocus attention to see both images. These kinds of
+            illusions
+            are categorized as ambiguous, distorting, or paradox illusions. Ambiguous images are figures that force the
+            brain to
+            switch back and forth between two separate images.</p>
     </div>
 
-    <button class="accordion">Examples</button>
+    <button class="accordion">How does it work?</button>
     <div class="panel">
-        <p>Three different types of opticla illusions: psychological illusions, literal illusions, and cognitive
-            illusions.</p>
+        <p>Cognitive illusions depend on the human mind's ability to perceive things through based on their conceptions. When looking at a cognitive illusion, the mind will assume an image based on prior exposure to a similar phenomenon.</p>
     </div>
 
-    <button class="accordion">Hermann Grid</button>
-    <div class="panel">
-        <p>Here you will see a white grid with black squares, but as you move your eyes across the patter, you will see
-            grey spots in places where black lines cross over each other</p>
-    </div>
 
     <script>
         var acc = document.getElementsByClassName("accordion");
@@ -75,50 +75,23 @@
 
 
     <!-- HOVER TABS -->
-    <div class="tab">
-        <button class="tablinks" onmouseover="openCity(event, 'The Dynamic Ebbinghaus')">The Dynamic Ebbinghaus</button>
-        <button class="tablinks" onmouseover="openCity(event, 'The Skye Blue Cafe Wall Illusion')">The Skye Blue Cafe Wall Illusion</button>
-        <button class="tablinks" onmouseover="openCity(event, 'Confetti')">Confetti</button>
-        <button class="tablinks" onmouseover="openCity(event, 'The Rice Wave Illusion')">The Rice Wave Illusion</button>
-        <button class="tablinks" onmouseover="openCity(event, 'The Tilted Road Illuion')">The Tilted Road Illusion</button>
+     <div class="tab">
+        <button class="tablinks" onmouseover="openCity(event, 'The Shepard Elephant')">The Shepard Elephant</button>
+        <button class="tablinks" onmouseover="openCity(event, 'The Impossible Triangle')">The Impossible Triangle</button>
+        <button class="tablinks" onmouseover="openCity(event, 'The Necker Cube')">The Necker Cube</button>
+        <button class="tablinks" onmouseover="openCity(event, 'Infinite Staircase')">Infinite Staircase</button>
     </div>
 
-<!--
-    <div id="The Dynamic Ebbinghaus" class="tabcontent">
 
-        <div class="questions" style="background-color:lightblue" >
-            <h1>How many legs does this elephant have?<span id='a1'></span> </h1><br>
-            <form id="d1">
-                <input type="radio" name="choice" value="answer1"> 4
-                <input type="radio" name="choice" value=> 5
-                <input type="radio" name="choice" value="Application"> I can't tell.
-                <input type="radio" name="choice" value="Application"> That's not an elephant!
-                <br>
-                <input type="submit" value="submit" onclick="validate(choice.value, '4', 'd1','a1')">
-            </form>
-        </div>
--->
-        <script>
-            var validate = function (valore, rightanswer, form, span) {
 
-                var formname = document.getElementById(form)
-                var spanname = document.getElementById(span)
 
-                spanname.innerHTML = rightanswer;
 
-                if (valore == rightanswer) {
-                    formname.innerHTML = "<div style='background-color:lightgreen'><h1>You're right. " + rightanswer + "</h1></div>";
-                }
-                else {
 
-                    formname.innerHTML = "<div style='background-color:pink'><h1>Sorry, you where wrong: The answer was: " + rightanswer + "</h1></div>";
-                }
-            };
-        </script>
 
-<div id="The Dynamic Ebbinghaus" class="tabcontent">
+
+<div id="The Shepard Elephant" class="tabcontent">
         
-        <h3>The Dynamic Ebbinghaus</h3>
+        <h3>The Shepard Elephant</h3>
 <?php
 include "dbConn.php";
 $sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
@@ -149,17 +122,72 @@ if ($resultQuestion->num_rows > 0) {
 $conn->close();
 $conn2->close();
 ?>
-        <p>The orange circle does not change size.</p>
-        <img
-            src="https://www.centreforsight.com/wp-content/uploads/2018/03/centre_for_sight_-_literal_optical_illusions_with_elephant_legs.jpg">
+<button onclick="showElephant()">Submit</button>
+    <p id="Elephant"></p>
+<script>
+function showElephant() {
+  document.getElementById("Elephant").innerHTML = "Parts of the object (in this case the elephant’s legs) become the background, and vice versa.";
+}
+</script>
+      <img src="https://www.centreforsight.com/wp-content/uploads/2018/03/centre_for_sight_-_literal_optical_illusions_with_elephant_legs.jpg">
     </div>
 
-    <div id="The Skye Blue Cafe Wall Illusion" class="tabcontent">
+    
+    
+    
+    
+ <div id="The Impossible Triangle" class="tabcontent">
+        <h3>The Impossible Triangle</h3>
+<?php
+include "dbConn.php";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Triangle . "' ORDER BY id";
+
+$resultQuestion = $conn->query($sqlQuestion);
+
+if ($resultQuestion->num_rows > 0) {
+    echo "<table>";
+    // output data of each row
+    while($rowQuestion = $resultQuestion->fetch_assoc()) {
+        echo "<tr><td></td><td>" . $rowQuestion["question"]. "</td></tr>";
+		$sqlOption = "SELECT id, qid, qoption FROM QuestionOption where qid=" . $rowQuestion["id"] . " ORDER BY id";
+        $resultOption = $conn2->query($sqlOption);
+        // echo $sqlOption . "<br/>";
+        if ($resultOption->num_rows > 0) {
+        	while($rowOption = $resultOption->fetch_assoc()) {
+        	echo "<tr><td></td><td><input type=\"radio\" name=\"" .$rowQuestion["topic"] . "\" id=\"" . $rowOption["id"] 
+        	. "\" value=\"" . $rowOption["qoption"] . "\" > <label for=\"" . $rowOption["id"] . "\" >" . $rowOption["qoption"] 
+        	. "</label> </td></tr>";
+        	}
+        }
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+$conn2->close();
+?>
+<button onclick="showTriangle()">Submit</button>
+    <p id="Triangle"></p>
+<script>
+function showTriangle() {
+  document.getElementById("Triangle").innerHTML = "The Triangle seems to be in an infinite loop.";
+}
+</script>
+        <img src="https://ih1.redbubble.net/image.1384633167.4941/flat,750x1000,075,t.jpg">
+    </div>
+
+
+
+
+
+<div id="The Necker Cube" class="tabcontent">
         
-        <h3>The Skye Blue Cafe Wall Illusion</h3>
+        <h3>The Necker Cube</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Cube . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -187,16 +215,25 @@ if ($resultQuestion->num_rows > 0) {
 $conn->close();
 $conn2->close();
 ?>
-        <p> The horizontal lines are perfectly parallel.</p>
-        <img src="http://static.nautil.us/15395_0e2e84a82d94dc94d5749d44d4c6c73b.png">
+<button onclick="showCube()">Submit</button>
+    <p id="Cube"></p>
+<script>
+function showCube() {
+  document.getElementById("Cube").innerHTML = "This illusion is part of an ambiguous class of illusions where a two-dimensional figure, or three-dimensional object can be seen in two or more sharply distinct ways.";
+}
+</script>
+      <img src="https://e7.pngegg.com/pngimages/15/794/png-clipart-necker-cube-penrose-triangle-impossible-cube-optical-illusion-psychology-angle-furniture.png">
     </div>
+    
+    
 
-    <div id="Confetti" class="tabcontent">
+
+<div id="Infinite Staircase" class="tabcontent">
         
-        <h3>Confetti</h3>
+        <h3>Infinite Staircase</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Staircase . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -224,116 +261,18 @@ if ($resultQuestion->num_rows > 0) {
 $conn->close();
 $conn2->close();
 ?>
-        <p>The circles are actually the same color, but the lines make them look different.</p>
-        <img src="http://static.nautil.us/15396_5b46370c9fd40a27ce2b2abc281064de.png">
-    </div>
-    <div id="The Rice Wave Illusion" class="tabcontent">
-        
-        <h3>The Rice Wave Illusion</h3>
-<?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
-
-$resultQuestion = $conn->query($sqlQuestion);
-
-if ($resultQuestion->num_rows > 0) {
-    echo "<table>";
-    // output data of each row
-    while($rowQuestion = $resultQuestion->fetch_assoc()) {
-        echo "<tr><td></td><td>" . $rowQuestion["question"]. "</td></tr>";
-		$sqlOption = "SELECT id, qid, qoption FROM QuestionOption where qid=" . $rowQuestion["id"] . " ORDER BY id";
-        $resultOption = $conn2->query($sqlOption);
-        // echo $sqlOption . "<br/>";
-        if ($resultOption->num_rows > 0) {
-        	while($rowOption = $resultOption->fetch_assoc()) {
-        	echo "<tr><td></td><td><input type=\"radio\" name=\"" .$rowQuestion["topic"] . "\" id=\"" . $rowOption["id"] 
-        	. "\" value=\"" . $rowOption["qoption"] . "\" > <label for=\"" . $rowOption["id"] . "\" >" . $rowOption["qoption"] 
-        	. "</label> </td></tr>";
-        	}
-        }
-    }
-    echo "</table>";
-} else {
-    echo "0 results";
+<button onclick="showStaircase()">Submit</button>
+    <p id="Staircase"></p>
+<script>
+function showStaircase() {
+  document.getElementById("Staircase").innerHTML = "When you are able to perceive the same image differently due to a distortion of its size, curve, length, or position, it is known as a distorting illusion. These illusions occur when the physical aspect of the image is modified, making you change your perception entirely. The illusion however, is not caused by a change in the dimensions of the image. Rather, the fact that you can see a change is the illusion itself, as the image remains constant but you perceive its dimensions to be ever changing rather than remaining constant.";
 }
-
-$conn->close();
-$conn2->close();
-?>
-        <p>The image looks like it is animated.</p>
-        <img src="http://static.nautil.us/15397_8e452e79cd525671ce2fb6997b73aaf9.png">
+</script>
+      <img src="https://www.opticalspy.com/uploads/1/4/4/9/144966/6336871_orig.jpg?150">
     </div>
-    <div id="The Tilted Road Illuion" class="tabcontent">
-        <h3>The Tilted Road Illuion</h3>
-<?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
 
-$resultQuestion = $conn->query($sqlQuestion);
 
-if ($resultQuestion->num_rows > 0) {
-    echo "<table>";
-    // output data of each row
-    while($rowQuestion = $resultQuestion->fetch_assoc()) {
-        echo "<tr><td></td><td>" . $rowQuestion["question"]. "</td></tr>";
-		$sqlOption = "SELECT id, qid, qoption FROM QuestionOption where qid=" . $rowQuestion["id"] . " ORDER BY id";
-        $resultOption = $conn2->query($sqlOption);
-        // echo $sqlOption . "<br/>";
-        if ($resultOption->num_rows > 0) {
-        	while($rowOption = $resultOption->fetch_assoc()) {
-        	echo "<tr><td></td><td><input type=\"radio\" name=\"" .$rowQuestion["topic"] . "\" id=\"" . $rowOption["id"] 
-        	. "\" value=\"" . $rowOption["qoption"] . "\" > <label for=\"" . $rowOption["id"] . "\" >" . $rowOption["qoption"] 
-        	. "</label> </td></tr>";
-        	}
-        }
-    }
-    echo "</table>";
-} else {
-    echo "0 results";
-}
 
-$conn->close();
-$conn2->close();
-?>
-        <p>same picture, but looks like it is taken from two different angles.</p>
-        <img src="http://static.nautil.us/15398_5edba33a1dcf1876318fb7013a0a8134.png">
-    </div>
-    <div id="The Train Illusion" class="tabcontent">
-        
-        <h3>The Train Illusion</h3>
-<?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
-
-$resultQuestion = $conn->query($sqlQuestion);
-
-if ($resultQuestion->num_rows > 0) {
-    echo "<table>";
-    // output data of each row
-    while($rowQuestion = $resultQuestion->fetch_assoc()) {
-        echo "<tr><td></td><td>" . $rowQuestion["question"]. "</td></tr>";
-		$sqlOption = "SELECT id, qid, qoption FROM QuestionOption where qid=" . $rowQuestion["id"] . " ORDER BY id";
-        $resultOption = $conn2->query($sqlOption);
-        // echo $sqlOption . "<br/>";
-        if ($resultOption->num_rows > 0) {
-        	while($rowOption = $resultOption->fetch_assoc()) {
-        	echo "<tr><td></td><td><input type=\"radio\" name=\"" .$rowQuestion["topic"] . "\" id=\"" . $rowOption["id"] 
-        	. "\" value=\"" . $rowOption["qoption"] . "\" > <label for=\"" . $rowOption["id"] . "\" >" . $rowOption["qoption"] 
-        	. "</label> </td></tr>";
-        	}
-        }
-    }
-    echo "</table>";
-} else {
-    echo "0 results";
-}
-
-$conn->close();
-$conn2->close();
-?>
-        <p>Train is moving in two directions.</p>
-        <img src="http://nautilus-prod.s3.amazonaws.com/Stewart9.gif">
-    </div>
 </body>
 
 </html>
