@@ -32,3 +32,12 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+/*
+//button code
+<script>
+function myFunction() {
+  document.getElementById("showResult").innerHTML = "Thank you for participating. Scroll down to learn more information about this illusion";
+}
+</script>
+*/
