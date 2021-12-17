@@ -13,7 +13,7 @@
   text-align: center;
   font-size: 18px;
   color: rgb(250, 244, 244);
-  font-family: garamond;
+  font-family: fantasy;
 }
 .btn {
   border:black;
@@ -47,32 +47,21 @@
       <a href="literal.php">Literal</a>
       <a href="cognitive.php">Cognitive</a>
     </div>
-    <br>
 
     <!-- ACCORDION-->
-    <button class="accordion">Afterimage</button>
+    <button class="accordion">What is it?</button>
     <div class="panel">
       <p>
-        Instances where your brain fills in the gaps of a sight that it thinks
-        should be there.
+        A psychological illusion tricks the mind and eyes into perceiving an image differently than displayed.
       </p>
     </div>
-    <button class="accordion">Examples</button>
+    <button class="accordion">How does it work?</button>
     <div class="panel">
       <p>
-        Three different types of opticla illusions: psychological illusions,
-        literal illusions, and cognitive illusions.
+        When looking at a psychological illusion, you may experience a discrepancy between your perceptions of an object or event observed under different conditions.
       </p>
     </div>
 
-    <button class="accordion">Hermann Grid</button>
-    <div class="panel">
-      <p>
-        Here you will see a white grid with black squares, but as you move your
-        eyes across the patter, you will see grey spots in places where black
-        lines cross over each other
-      </p>
-    </div>
 <br>
     <script>
       var acc = document.getElementsByClassName("accordion");
@@ -165,7 +154,6 @@ function showEbbinghaus() {
   document.getElementById("Ebbinghaus").innerHTML = "The orange circle does not change size.";
 }
 </script>
-      <!-- <p>The orange circle does not change size.</p>-->
       <img src="http://nautilus-prod.s3.amazonaws.com/Stewart7.gif" />
     </div>
 
@@ -175,7 +163,7 @@ function showEbbinghaus() {
 <?php
 include "dbConn.php";
 //$sqlQuestion = "SELECT id, topic, question FROM Question ORDER BY id";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Cafe . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -217,10 +205,10 @@ function showCafe() {
 
     <div id="The Confetti" class="tabcontent">
       
-      <h3>Confetti</h3>
+      <h3>The Confetti</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Confetti . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -264,7 +252,7 @@ function showConfetti() {
       <h3>The Rice Wave Illusion</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Rice . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
@@ -307,7 +295,7 @@ function showRice() {
       <h3>The Tilted Road Illuion</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Elephant . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Road . "' ORDER BY id";
 
 $resultQuestion = $conn->query($sqlQuestion);
 
