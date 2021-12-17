@@ -82,13 +82,6 @@
         <button class="tablinks" onmouseover="openCity(event, 'Infinite Staircase')">Infinite Staircase</button>
     </div>
 
-
-
-
-
-
-
-
 <div id="The Shepard Elephant" class="tabcontent">
         
         <h3>The Shepard Elephant</h3>
@@ -126,7 +119,7 @@ $conn2->close();
     <p id="Elephant"></p>
 <script>
 function showElephant() {
-  document.getElementById("Elephant").innerHTML = "Parts of the object (in this case the elephant’s legs) become the background, and vice versa.";
+  document.getElementById("Elephant").innerHTML = "The elephant illusion is an adaptation of the original which was created by Roger Shepard and published in his book Mind Sights depicts what may at first glance appear to be something that could exist as a real object in the three-dimensional world. Parts of the object (in this case the elephant’s legs) become the background, and vice versa.";
 }
 </script>
       <img src="https://www.centreforsight.com/wp-content/uploads/2018/03/centre_for_sight_-_literal_optical_illusions_with_elephant_legs.jpg">
@@ -172,7 +165,7 @@ $conn2->close();
     <p id="Triangle"></p>
 <script>
 function showTriangle() {
-  document.getElementById("Triangle").innerHTML = "The Triangle seems to be in an infinite loop.";
+  document.getElementById("Triangle").innerHTML = "The Triangle seems to be in an infinite loop. The impossible triangle is an illusion is dependent on a cognitive misunderstanding that adjacent edges must join. Distortingillusions are the most common as they are a biproduct of perceptual learning. They were simple to discover and are easily repeatable.";
 }
 </script>
         <img src="https://ih1.redbubble.net/image.1384633167.4941/flat,750x1000,075,t.jpg">
