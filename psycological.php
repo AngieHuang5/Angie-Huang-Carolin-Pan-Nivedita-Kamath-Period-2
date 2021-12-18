@@ -116,8 +116,6 @@
     <div id="The Dynamic Ebbinghaus" class="tabcontent">
       
       <h3>The Dynamic Ebbinghaus</h3>
-/* 
-<!--
 <?php
 include "dbConn.php";
 $sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Ebbinghaus . "' ORDER BY id";
@@ -333,8 +331,7 @@ function showRoad() {
   document.getElementById("Road").innerHTML = "The two pictures are the same picture, but it looks like it was taken from two different angles.";
 }
 </script>
--->
-*/
+
       <img
         src="http://static.nautil.us/15398_5edba33a1dcf1876318fb7013a0a8134.png"
       />
