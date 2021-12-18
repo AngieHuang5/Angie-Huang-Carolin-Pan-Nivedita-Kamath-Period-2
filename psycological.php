@@ -116,6 +116,7 @@
     <div id="The Dynamic Ebbinghaus" class="tabcontent">
       
       <h3>The Dynamic Ebbinghaus</h3>
+/* 
 <!--
 <?php
 include "dbConn.php";
@@ -333,6 +334,7 @@ function showRoad() {
 }
 </script>
 -->
+*/
       <img
         src="http://static.nautil.us/15398_5edba33a1dcf1876318fb7013a0a8134.png"
       />
