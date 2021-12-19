@@ -148,8 +148,9 @@ if ($resultQuestion->num_rows > 0) {
 
 <button onclick="showTriangle()">See description</button>
     <p id="Triangle"></p>
-<script>
-  document.getElementById("Triangle").innerHTML = "The Triangle seems to be in an infinite loop. The impossible triangle is an illusion is dependent on a cognitive misunderstanding that adjacent edges must join. Distortingillusions are the most common as they are a biproduct of perceptual learning. They were simple to discover and are easily repeatable.";
+<script> 
+function showTriangle()) {
+  document.getElementById("Triangle").innerHTML = "The Triangle seems to be in an infinite loop. The impossible triangle is an illusion is dependent on a cognitive misunderstanding that adjacent edges must join. Distorting illusions are the most common as they are a biproduct of perceptual learning. They were simple to discover and are easily repeatable.";
 }
 </script>
         <img src="cognitive_triangle.jpeg">
