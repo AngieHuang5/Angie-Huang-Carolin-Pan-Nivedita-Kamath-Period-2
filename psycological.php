@@ -146,7 +146,8 @@ if ($resultQuestion->num_rows > 0) {
     
     <button onclick="showEbbinghaus()">See description</button>
     <p id="Ebbinghaus"></p>
-<script>
+<script> 
+function showEbbinghaus() {
 document.getElementById("Ebbinghaus").innerHTML = "The Ebbinghaus illusion or Titchener circles is a psychological illusion of relative size perception. The orange circle does not change size. The two main visual contributors to this illusion are the difference in the distance between the outer ring and inner circles as well as the completeness of the ring surrounding the perceived smaller circle.";
 }
 </script>
@@ -231,7 +232,8 @@ if ($resultQuestion->num_rows > 0) {
 <button onclick="showConfetti()">See description</button>
     <p id="Confetti"></p>
 <script>
-document.getElementById("Confetti").innerHTML = "This illusion demonstrates the imperfect way our eyes perceive color. When you place a solid-colored shape behind bars of different colors, those bars influence how we see what's between them. Our brains want to fill in the gaps between the stripes. Depending on the surrounding shades, a circle that's really peach may look like it's "tinted" pink, green, or yellow.";
+function showConfetti() {
+document.getElementById("Confetti").innerHTML = "This illusion demonstrates the imperfect way our eyes perceive color. When you place a solid-colored shape behind bars of different colors, those bars influence how we see what's between them. Our brains want to fill in the gaps between the stripes. Depending on the surrounding shades, a circle that's really peach may look like it's tinted pink, green, or yellow.";
 }
 </script>
       <img
