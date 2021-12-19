@@ -110,7 +110,7 @@ if ($resultQuestion->num_rows > 0) {
     <p id="Elephant"></p>
 <script>
 function showElephant() {
-  document.getElementById("Elephant").innerHTML = "Parts of the object (in this case the elephant’s legs) become the background, and vice versa.";
+  document.getElementById("Elephant").innerHTML = "The elephant illusion is an adaptation of the original which was created by Roger Shepard and published in his book Mind Sights depicts what may at first glance appear to be something that could exist as a real object in the three-dimensional world. Parts of the object (in this case the elephant’s legs) become the background, and vice versa.";
 }
 </script>
       <img src="cognitive_elephant.jpeg">
@@ -149,8 +149,7 @@ if ($resultQuestion->num_rows > 0) {
 <button onclick="showTriangle()">See description</button>
     <p id="Triangle"></p>
 <script>
-function showTriangle() {
-  document.getElementById("Triangle").innerHTML = "The Triangle seems to be in an infinite loop.";
+  document.getElementById("Triangle").innerHTML = "The Triangle seems to be in an infinite loop. The impossible triangle is an illusion is dependent on a cognitive misunderstanding that adjacent edges must join. Distortingillusions are the most common as they are a biproduct of perceptual learning. They were simple to discover and are easily repeatable.";
 }
 </script>
         <img src="cognitive_triangle.jpeg">
