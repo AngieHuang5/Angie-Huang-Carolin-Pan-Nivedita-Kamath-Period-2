@@ -92,7 +92,7 @@
 
     <!-- NAVBAR -->
     <div class="topnav">
-      <a href="index.php">Home</a>
+      <a href="homepage.php">Home</a>
       <a href="psycological.php">Psychological</a>
       <a href="literal.php">Literal</a>
       <a href="cognitive.php">Cognitive</a>
@@ -103,7 +103,7 @@
     </div>
     <p>Hover over the image to read the definition of optical illusions.</p>
     <div class="container">
-      <img src="https://i.pinimg.com/474x/6e/9c/8c/6e9c8c33249e2a8105dd11dff83be8e7.jpg" alt="Avatar" class="image">
+      <img src="homepage_beard.jpeg" alt="Avatar" class="image">
       <div class="overlay">
         <div class="text">Optical illusion is best defined as something that tricks your eyes and
           makes you think that you can see something that is not there, or makes
@@ -115,7 +115,7 @@
     </div>
     <p>Hover over the image to read the types of optical illusions.</p>
     <div class="container">
-      <img src="https://m.media-amazon.com/images/I/5119gLqeTrL._SX260_.jpg" alt="Avatar" class="image">
+      <img src="homepage_umbrella.jpeg" alt="Avatar" class="image">
       <div class="overlay">
         <div class="text">There are three different types of optical illusions: psychological illusions,
           literal illusions, and cognitive illusions.</div>
@@ -125,7 +125,7 @@
     </div>
    <p>Hover over the image to read the significance of optical illusions.</p>
     <div class="container">
-           <img src="https://i.pinimg.com/736x/ad/ac/9c/adac9c2d2f1fb720d24cd49a5fc54fb1.jpg" alt="Avatar" class="image">
+           <img src="homepage_sunset.jpeg" alt="Avatar" class="image">
       <div class="overlay">
         <div class="text">Optical illusions teach us how our eyes and brain work together to see.
           Many artists use optical illusions to to create phenomena that fool the
