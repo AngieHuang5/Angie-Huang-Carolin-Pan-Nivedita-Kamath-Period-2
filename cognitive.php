@@ -160,7 +160,7 @@ if ($resultQuestion->num_rows > 0) {
         <h3>The Necker Cube</h3>
 
 <?php
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Cube . "' ORDER BY id";
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Cube' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
