@@ -36,18 +36,18 @@
     <button class="accordion">What is it?</button>
     <div class="panel">
       <p>
-        A literal illusion is when the image you see is different than the actual images in the picture. 
+        A literal illusion is when the image you see is different than the actual images that make up the picture.
       </p>
     </div>
 
     <button class="accordion">How does it work?</button>
     <div class="panel">
-      <p>
+     <p>
         The eye and brain will choose and focus on specific objects which causes
         on part of the image to appear one way or the other. Depending on what
         the brain chooses to focus on, it can perceive two different images in
         one.
-      </p>
+     </p>
     </div>
 
 
@@ -121,7 +121,7 @@ if ($resultQuestion->num_rows > 0) {
     <p id="Face"></p>
 <script>
 function showFace() {
-  document.getElementById("Face").innerHTML = "There appears to be a face on the surface of Mars.";
+  document.getElementById("Face").innerHTML = "25 years ago NASA’s Viking1 spacecraft was circling the planet Mars, snapping some photos of possible landing sites for its sister ship Viking2, when it spotted the shadowy likeness of a human face.";
 }
 </script>
       <img
@@ -248,7 +248,7 @@ $conn2->close();
     <p id="Bakery"></p>
 <script>
 function showBakery() {
-  document.getElementById("Bakery").innerHTML = "This image shows a woman with bread as well as skulls of different sizes.";
+  document.getElementById("Bakery").innerHTML = "It seems like just a peaceful photo of a woman in her bread shop, but upon scanning the photo, multitudes of skulls comes to overwhelm the photo, symboling how common things often have evi counterparts.";
 }
 </script>
       <img
