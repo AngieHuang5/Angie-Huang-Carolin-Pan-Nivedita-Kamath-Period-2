@@ -42,14 +42,14 @@
     
     <!-- NAVBAR -->
     <div class="topnav">
-      <a href="index.php">Home</a>
+      <a href="homepage.php">Home</a>
       <a href="psycological.php">Psychological</a>
       <a href="literal.php">Literal</a>
       <a href="cognitive.php">Cognitive</a>
     </div>
 
     <!-- ACCORDION-->
-    <button class="accordion">What is it?</button>
+    <button class="accordion">What is this?</button>
     <div class="panel">
       <p>
         A psychological illusion tricks the mind and eyes into perceiving an image differently than displayed.
@@ -84,28 +84,28 @@
     <div class="tab">
       <button
         class="tablinks"
-        onmouseover="openCity(event, 'The Dynamic Ebbinghaus')"
+        onmouseover="openCity(event, 'TheDynamicEbbinghaus')"
       >
         The Dynamic Ebbinghaus
       </button>
       <button
         class="tablinks"
-        onmouseover="openCity(event, 'The Sky Blue Cafe Wall Illusion')"
+        onmouseover="openCity(event, 'TheSkyBlueCafeWallIllusion')"
       >
         The Sky Blue Cafe Wall Illusion
       </button>
-      <button class="tablinks" onmouseover="openCity(event, 'The Confetti')">
-        Confetti
+      <button class="tablinks" onmouseover="openCity(event, 'TheConfetti')">
+        The Confetti
       </button>
       <button
         class="tablinks"
-        onmouseover="openCity(event, 'The Rice Wave Illusion')"
+        onmouseover="openCity(event, 'TheRiceWaveIllusion')"
       >
         The Rice Wave Illusion
       </button>
       <button
         class="tablinks"
-        onmouseover="openCity(event, 'The Tilted Road Illuion')"
+        onmouseover="openCity(event, 'TheTiltedRoadIlluion')"
       >
         The Tilted Road Illuion
       </button>
@@ -113,13 +113,13 @@
     
     
     <!-- Accordion -->
-    <div id="The Dynamic Ebbinghaus" class="tabcontent">
+    <div id="TheDynamicEbbinghaus" class="tabcontent">
       
       <h3>The Dynamic Ebbinghaus</h3>
+      
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Ebbinghaus . "' ORDER BY id";
-
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Ebbinghaus' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -142,29 +142,25 @@ if ($resultQuestion->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-$conn2->close();
 ?> 
     
-    <button onclick="showEbbinghaus()">Submit</button>
+    <button onclick="showEbbinghaus()">See description</button>
     <p id="Ebbinghaus"></p>
 <script>
 function showEbbinghaus() {
   document.getElementById("Ebbinghaus").innerHTML = "The orange circle does not change size.";
 }
 </script>
-      <img src="http://nautilus-prod.s3.amazonaws.com/Stewart7.gif" />
+      <img src="psycological_circle.gif" />
     </div>
 
-    <div id="The Sky Blue Cafe Wall Illusion" class="tabcontent">
+    <div id="TheSkyBlueCafeWallIllusion" class="tabcontent">
       
       <h3>The Sky Blue Cafe Wall Illusion</h3>
+      
 <?php
-include "dbConn.php";
-//$sqlQuestion = "SELECT id, topic, question FROM Question ORDER BY id";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Cafe . "' ORDER BY id";
 
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Cafe' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -188,11 +184,9 @@ if ($resultQuestion->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-$conn2->close();
 ?> 
-<button onclick="showCafe()">Submit</button>
+
+<button onclick="showCafe()">See description</button>
     <p id="Cafe"></p>
 <script>
 function showCafe() {
@@ -200,17 +194,17 @@ function showCafe() {
 }
 </script>
       <img
-        src="http://static.nautil.us/15395_0e2e84a82d94dc94d5749d44d4c6c73b.png"
+        src="psycological_blue.png"
       />
     </div>
 
-    <div id="The Confetti" class="tabcontent">
+    <div id="TheConfetti" class="tabcontent">
       
       <h3>The Confetti</h3>
+      
 <?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Confetti . "' ORDER BY id";
 
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Confetti' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -233,11 +227,9 @@ if ($resultQuestion->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-$conn2->close();
 ?> 
-<button onclick="showConfetti()">Submit</button>
+
+<button onclick="showConfetti()">See description</button>
     <p id="Confetti"></p>
 <script>
 function showConfetti() {
@@ -245,16 +237,16 @@ function showConfetti() {
 }
 </script>
       <img
-        src="http://static.nautil.us/15396_5b46370c9fd40a27ce2b2abc281064de.png"
+        src="psycological_colors.png"
       />
     </div>
-    <div id="The Rice Wave Illusion" class="tabcontent">
+    <div id="TheRiceWaveIllusion" class="tabcontent">
       
       <h3>The Rice Wave Illusion</h3>
+      
 <?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Rice . "' ORDER BY id";
 
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Rice' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -277,27 +269,26 @@ if ($resultQuestion->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-$conn2->close();
 ?>
-<button onclick="showRice()">Submit</button>
+
+<button onclick="showRice()">See description</button>
     <p id="Rice"></p>
 <script>
 function showRice() {
   document.getElementById("Rice").innerHTML = "The image looks like it is animated.";
 }
+
 </script>
       <img
-        src="http://static.nautil.us/15397_8e452e79cd525671ce2fb6997b73aaf9.png"
+        src="psycological_rice.png"
       />
     </div>
-    <div id="The Tilted Road Illuion" class="tabcontent">
+    <div id="TheTiltedRoadIlluion" class="tabcontent">
       <h3>The Tilted Road Illuion</h3>
-<?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Road . "' ORDER BY id";
 
+<?php
+
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Road' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -320,12 +311,11 @@ if ($resultQuestion->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-$conn2->close();
 ?>
-<button onclick="showRoad()">Submit</button>
+
+<button onclick="showRoad()">See description</button>
     <p id="Road"></p>
+
 <script>
 function showRoad() {
   document.getElementById("Road").innerHTML = "The two pictures are the same picture, but it looks like it was taken from two different angles.";
@@ -333,7 +323,7 @@ function showRoad() {
 </script>
 
       <img
-        src="http://static.nautil.us/15398_5edba33a1dcf1876318fb7013a0a8134.png"
+        src="psycological_road.png"
       />
     </div>
   </body>
