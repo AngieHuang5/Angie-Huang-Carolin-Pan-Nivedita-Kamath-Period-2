@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>CSP Webpage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
@@ -27,7 +27,7 @@
     </h1>
     <!-- NAVBAR -->
     <div class="topnav">
-      <a href="index.php">Home</a>
+      <a href="homepage.php">Home</a>
       <a href="psycological.php">Psychological</a>
       <a href="literal.php">Literal</a>
       <a href="cognitive.php">Cognitive</a>
@@ -36,7 +36,7 @@
     <button class="accordion">What is it?</button>
     <div class="panel">
       <p>
-        A literal illusion is when the image you see is different than the actual images that make up the picture.
+        A literal illusion is when the image you see is different than the actual images in the picture. 
       </p>
     </div>
 
@@ -87,18 +87,12 @@
       </button>
     </div>
    
-
-
-
-
-
     <!-- Accordion -->
 <div id="Face on Mars" class="tabcontent">
       <h3>Face on Mars</h3>
 <?php
 include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Face . "' ORDER BY id";
-
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Face' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -121,34 +115,26 @@ if ($resultQuestion->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-$conn2->close();
 ?> 
-<button onclick="showFace()">Submit</button>
+
+<button onclick="showFace()">See description</button>
     <p id="Face"></p>
 <script>
 function showFace() {
-  document.getElementById("Face").innerHTML = "25 years ago NASA’s Viking1 spacecraft was circling the planet Mars, snapping some photos of possible landing sites for its sister ship Viking2, when it spotted the shadowy likeness of a human face.";
+  document.getElementById("Face").innerHTML = "There appears to be a face on the surface of Mars.";
 }
 </script>
       <img
-        src="http://ideate.xsead.cmu.edu/uploads/thumbnails/4085/thumbnails/large/pio_med.thumb.jpeg?1445291490"
+        src="literal_moon.jpeg"
       />
     </div>
-
-
-
-
-
 
 <div id="Smile in the Sky" class="tabcontent">
       
       <h3>Smile in the Sky</h3>
+      
 <?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Smile . "' ORDER BY id";
-
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Smile' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -171,11 +157,9 @@ if ($resultQuestion->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-$conn2->close();
 ?> 
-<button onclick="showSmile()">Submit</button>
+
+<button onclick="showSmile()">See description</button>
     <p id="Smile"></p>
 <script>
 function showSmile() {
@@ -183,21 +167,15 @@ function showSmile() {
 }
 </script>
       <img
-        src="http://ideate.xsead.cmu.edu/uploads/thumbnails/4088/thumbnails/large/literal_optical_illusion.thumb.jpeg?1445291794"
+        src="literal_smile.jpeg"
       />
     </div>
 
-
-
-
-
-
 <div id="All is Vanity" class="tabcontent">
       <h3>All is Vanity</h3>
+      
 <?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Vanity . "' ORDER BY id";
-
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Vanity' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -220,11 +198,9 @@ if ($resultQuestion->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-$conn2->close();
 ?>
-<button onclick="showVanity()">Submit</button>
+
+<button onclick="showVanity()">See description</button>
     <p id="Vanity"></p>
 <script>
 function showVanity() {
@@ -232,20 +208,15 @@ function showVanity() {
 }
 </script>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Allisvanity.jpg"
+        src="literal_vanity.jpeg"
       />
     </div>
 
-
-
-
-
 <div id="The Bakery" class="tabcontent">
       <h3>The Bakery</h3>
+      
 <?php
-include "dbConn.php";
-$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='" . Bakery . "' ORDER BY id";
-
+$sqlQuestion = "SELECT id, topic, question FROM Question WHERE topic='Bakery' ORDER BY id";
 $resultQuestion = $conn->query($sqlQuestion);
 
 if ($resultQuestion->num_rows > 0) {
@@ -272,15 +243,16 @@ if ($resultQuestion->num_rows > 0) {
 $conn->close();
 $conn2->close();
 ?> 
-<button onclick="showBakery()">Submit</button>
+
+<button onclick="showBakery()">See description</button>
     <p id="Bakery"></p>
 <script>
 function showBakery() {
-  document.getElementById("Bakery").innerHTML = "It seems like just a peaceful photo of a woman in her bread shop, but upon scanning the photo, multitudes of skulls comes to overwhelm the photo, symboling how common things often have evi counterparts.";
+  document.getElementById("Bakery").innerHTML = "This image shows a woman with bread as well as skulls of different sizes.";
 }
 </script>
       <img
-        src="http://ideate.xsead.cmu.edu/uploads/thumbnails/4091/thumbnails/large/9724930.thumb.jpeg?1445292100"
+        src="cognitive_woman.jpeg"
       />
     </div>
   </body>
