@@ -17,6 +17,25 @@
   color: rgb(243, 239, 239);
   font-family: fantasy;
 }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: green;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
 
 </style>
 <body>
@@ -35,7 +54,7 @@
     <!-- ACCORDION-->
     <button class="accordion">What is it?</button>
     <div class="panel">
-        <p>A cognitive illusion is usually a picture that is meant to show an ambiguous image or images. These images
+        <p>A <a href="https://www.alleydog.com/glossary/definition.php?term=Cognitive+Illusion#:~:text=A%20cognitive%20illusion%20is%20usually,%2C%20distorting%2C%20or%20paradox%20illusions.">cognitive illusion</a> is usually a picture that is meant to show an ambiguous image or images. These images
             can be
             meant to confuse the senses or to require the mind to refocus attention to see both images. These kinds of
             illusions
@@ -149,7 +168,7 @@ if ($resultQuestion->num_rows > 0) {
 <button onclick="showTriangle()">See description</button>
     <p id="Triangle"></p>
 <script> 
-function showTriangle()) {
+function showTriangle() {
   document.getElementById("Triangle").innerHTML = "The Triangle seems to be in an infinite loop. The impossible triangle is an illusion is dependent on a cognitive misunderstanding that adjacent edges must join. Distorting illusions are the most common as they are a biproduct of perceptual learning. They were simple to discover and are easily repeatable.";
 }
 </script>
@@ -238,6 +257,27 @@ function showStaircase() {
 </script>
       <img src="cognitive_stair.jpeg">
     </div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
 
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </body>
 </html>
