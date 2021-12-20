@@ -16,6 +16,25 @@
   color: rgb(245, 240, 240);
   font-family: fantasy;
 }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: green;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
     </style>
   </head>
 
@@ -36,18 +55,18 @@
     <button class="accordion">What is it?</button>
     <div class="panel">
       <p>
-        A literal illusion is when the image you see is different than the actual images that make up the picture.
+        A <a href="https://www.cleareyes.com/eye-care-blog/201610/types-optical-illusions#:~:text=A%20literal%20illusion%20is%20when,image%20is%20a%20literal%20illusion.&text=The%20end%20result%20you%20see,is%20based%20on%20your%20perception.">literal illusion</a> is when the image you see is different than the actual images in the picture. 
       </p>
     </div>
 
     <button class="accordion">How does it work?</button>
     <div class="panel">
-     <p>
+      <p>
         The eye and brain will choose and focus on specific objects which causes
         on part of the image to appear one way or the other. Depending on what
         the brain chooses to focus on, it can perceive two different images in
         one.
-     </p>
+      </p>
     </div>
 
 
@@ -121,7 +140,7 @@ if ($resultQuestion->num_rows > 0) {
     <p id="Face"></p>
 <script>
 function showFace() {
-  document.getElementById("Face").innerHTML = "25 years ago NASA’s Viking1 spacecraft was circling the planet Mars, snapping some photos of possible landing sites for its sister ship Viking2, when it spotted the shadowy likeness of a human face.";
+  document.getElementById("Face").innerHTML = "There appears to be a face on the surface of Mars.";
 }
 </script>
       <img
@@ -248,12 +267,34 @@ $conn2->close();
     <p id="Bakery"></p>
 <script>
 function showBakery() {
-  document.getElementById("Bakery").innerHTML = "It seems like just a peaceful photo of a woman in her bread shop, but upon scanning the photo, multitudes of skulls comes to overwhelm the photo, symboling how common things often have evi counterparts.";
+  document.getElementById("Bakery").innerHTML = "This image shows a woman with bread as well as skulls of different sizes.";
 }
 </script>
       <img
         src="cognitive_woman.jpeg"
       />
     </div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
   </body>
 </html>
